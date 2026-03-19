@@ -3,8 +3,8 @@
 # ==============================================================================
 
 FC       = nvfortran
-FFLAGS   = -O3 -std=f2003 -module $(BUILD) -I$(BUILD)
-ACC      = -acc -gpu=cc89        # change cc89 to match your GPU
+FFLAGS   = -fast -module $(BUILD) -I$(BUILD)
+ACC      = -acc -gpu=cc80        # change cc89 to match your GPU
 DBGFLAGS = -g -O0 -Mbounds -Mchkptr -traceback -module $(BUILD) -I$(BUILD)
 
 BUILD    = build
@@ -19,18 +19,20 @@ SRCS = \
     src/core/kinds.f90               \
     src/core/constants.f90           \
     src/core/grid.f90                \
-    src/lattice/lattice_base.f90     \
-    src/lattice/d3q19.f90            \
-    src/lattice/d3q27.f90            \
-    src/collision/collision_base.f90 \
+    src/scheme/scheme.f90     	     \
+    src/scheme/d3q19.f90             \
+    src/scheme/d3q27.f90             \
+    src/collision/collision.f90 	 \
     src/collision/bgk.f90            \
     src/collision/kbc.f90            \
-    src/boundary/bc_base.f90         \
+    src/boundary/bc.f90         	 \
     src/boundary/periodic.f90        \
     src/boundary/bounce_back.f90     \
     src/boundary/zou_he.f90          \
-    src/solver/macroscopics.f90      \
-    src/solver/solver.f90            \
+    src/solver/macro_2d.f90          \
+    src/solver/macro_3d.f90          \
+    src/solver/solver_2d.f90         \
+    src/solver/solver_3d.f90         \
     src/io/checkpoint.f90            \
     src/io/vtk_writer.f90            \
     src/main.f90
