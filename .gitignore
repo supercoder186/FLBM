@@ -1,0 +1,50 @@
+# Build artifacts
+build/
+*.o
+*.mod
+*.smod
+*.a
+*.so
+
+# Executables
+lbm
+lbm_debug
+*.out
+
+# Output files
+output/
+results/
+*.vtk
+*.vtu
+*.pvtu
+*.vts
+*.pvts
+*.dat
+*.bin
+*.h5
+*.hdf5
+
+# Checkpoints
+checkpoints/
+*.chk
+
+# Profiling
+*.prof
+*.pgprof
+*.nsys-rep
+*.qdrep
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+\#*\#
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependency files
+*.d
