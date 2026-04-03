@@ -8,4 +8,9 @@ module d2q5
         0,  0, +1,  0, -1], &
     shape=[2, 5], order=[2, 1])
 
+    real(wp), dimension(5) :: LATTICE_WEIGHTS = [ &
+        1.0_wp/3, &
+        1.0_wp/6, 1.0_wp/6, 1.0_wp/6, 1.0_wp/6 &
+    ]
+
 end module d2q5
