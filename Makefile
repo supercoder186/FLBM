@@ -20,11 +20,6 @@ SRCS = \
     src/core/constants.f90           \
     src/core/grid.f90                \
     src/scheme/scheme.f90     	     \
-    src/scheme/d2q5.f90              \
-    src/scheme/d2q9.f90              \
-    src/scheme/d3q15.f90             \
-    src/scheme/d3q19.f90             \
-    src/scheme/d3q27.f90             \
     src/collision/collision.f90 	 \
     src/collision/bgk.f90            \
     src/collision/kbc.f90            \
